@@ -1,5 +1,6 @@
 <main class="container">
-  <%= link_to sanitize(t('.back_button')), quotes_path %>
+  <%= render 'back_button' %>
+
   <div class="header">
     <h1>
       <%= @quote.name %>

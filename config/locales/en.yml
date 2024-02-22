@@ -28,29 +28,26 @@
 #       enabled: "ON"
 
 en:
-  edit_button: 'Edit'
-  delete_button: 'Delete'
+  edit_button: Edit
+  delete_button: Delete
   quotes:
+    back_button: '&larr; Back to quotes'
     index:
       title: Quotes
-      new_button: 'New quote'
+      new_button: New quote
     new:
       title: New quote
-      back_button: '&larr; Back to quotes'
     edit:
       title: Edit quote
-      back_button: '&larr; Back to quotes'
-    show:
-      back_button: '&larr; Back to quotes'
     create:
-      success_notice: 'Quote was successfully created.'
+      success_notice: Quote was successfully created.
     update:
-      success_notice: 'Quote was successfully updated.'
+      success_notice: Quote was successfully updated.
     destroy:
-      success_notice: 'Quote was successfully destroyed.'
+      success_notice: Quote was successfully destroyed.
   activerecord:
     models:
       quote: Quote
     attributes:
       quote:
-        name: 'Name'
+        name: Name
