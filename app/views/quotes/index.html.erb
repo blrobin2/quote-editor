@@ -1,0 +1,8 @@
+<main class="container">
+    <div class="header">
+        <h1><%= t('.title') %></h1>
+        <%= link_to t('.new_button'), new_quote_path, class: 'btn btn--primary' %>
+    </div>
+
+    <%= render @quotes %>
+</main>

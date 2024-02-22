@@ -1,0 +1,7 @@
+<div class="quote">
+    <%= link_to quote.name, quote_path(quote) %>
+    <div class="quote__actions">
+        <%= button_to t('delete_button'), quote_path(quote), method: :delete, class: 'btn btn--light' %>
+        <%= link_to t('edit_button'), edit_quote_path(quote), class: 'btn btn--light' %>
+    </div>
+</div>
