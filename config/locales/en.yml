@@ -30,6 +30,7 @@
 en:
   edit_button: Edit
   delete_button: Delete
+  cancel_button: Cancel
   quotes:
     back_button: '&larr; Back to quotes'
     index:
