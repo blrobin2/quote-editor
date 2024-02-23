@@ -1,0 +1,10 @@
+<main class="container">
+  <h1><%= t('.title') %></h1>
+  <p><%= t('.subtitle') %></p>
+
+  <% if user_signed_in? %>
+    <%= link_to t('.quotes_button'), quotes_path, class: "btn btn--dark" %>
+  <% else %>
+    <%= link_to t('sign_in_button'), new_user_session_path, class: "btn btn--dark" %>
+  <% end %>
+</main>

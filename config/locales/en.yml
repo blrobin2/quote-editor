@@ -31,6 +31,14 @@ en:
   edit_button: Edit
   delete_button: Delete
   cancel_button: Cancel
+  sign_in_button: Sign in
+  sign_out_button: Sign out
+  pages:
+    home:
+      title: Quote editor
+      subtitle: A blazing fast quote editor built with Hotwire
+      quotes_button: View quotes
+
   quotes:
     back_button: '&larr; Back to quotes'
     index:
