@@ -16,11 +16,8 @@ class QuotesController < ApplicationController
     def create
         @quote = current_company.quotes.build(quote_params)
 
-        if @quote.save
-            respond_to do |format|
-                format.html { redirect_to quotes_path, notice: I18n.t('.success_notice') }
-                format.turbo_stream
-            end
+        if @quote.save!
+            success_response
         else
             render :new, status: :unprocessable_entity
         end
@@ -30,7 +27,7 @@ class QuotesController < ApplicationController
 
     def update
         if @quote.update(quote_params)
-            redirect_to quotes_path, notice: I18n.t('.success_notice')
+            success_response
         else
             render :edit, status: :unprocessable_entity
         end
@@ -39,12 +36,7 @@ class QuotesController < ApplicationController
     def destroy
         @quote.destroy
 
-        respond_to do |format|
-            format.html do
-                redirect_to quotes_path, notice: I18n.t('.success_notice')
-            end
-            format.turbo_stream
-        end
+        success_response
     end
 
     private
@@ -55,5 +47,12 @@ class QuotesController < ApplicationController
 
     def quote_params
         params.require(:quote).permit(:name)
+    end
+
+    def success_response
+        respond_to do |format|
+            format.html { redirect_to quotes_path, notice: t('.success_notice') }
+            format.turbo_stream { flash.now[:notice] = t('.success_notice') }
+        end
     end
 end
