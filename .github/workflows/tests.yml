@@ -26,4 +26,4 @@ jobs:
         run: bundle install
 
       - name: Run test suite
-        run: bundle exec rails test
+        run: bundle exec rails test:all
